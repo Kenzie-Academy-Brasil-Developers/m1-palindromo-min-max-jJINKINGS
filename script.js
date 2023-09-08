@@ -1,7 +1,14 @@
 function isPalindrome(str){
-    /* Seu código aqui */
-}
+    str = str.replaceAll(" ","").toLowerCase();
+    console.log(str)
+    strReversa = str.split("").reverse().join("");
+    console.log(strReversa);
 
-function arrayMaxMin(arr){
-    /* Seu código aqui */
+    for(let i = 0; i < str.length-1; i++) {
+        if(str === strReversa) {
+            return true;
+        }
+    }
+
+    return false;
 }
