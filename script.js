@@ -1,11 +1,10 @@
 function isPalindrome(str){
-    str = str.replaceAll(" ","").toLowerCase();
-    console.log(str)
-    strReversa = str.split("").reverse().join("");
-    console.log(strReversa);
+    let strNormal = str.replaceAll(" ","").toLowerCase();
+    let strReversa = "";
 
-    for(let i = 0; i < str.length-1; i++) {
-        if(str === strReversa) {
+    for(let i = strNormal.length - 1; i >= 0; i--) {
+        strReversa += strNormal[i];
+        if(strNormal === strReversa) {
             return true;
         }
     }
